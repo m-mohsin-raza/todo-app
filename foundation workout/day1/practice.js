@@ -1,7 +1,7 @@
 console.log("Hello world!")
-x = 5;
-y = 6;
-z = x + y;
+let x = 5;
+let y = 6;
+let z = x + y;
 const a = 1;
 var sum = 1;
 console.log(z)
@@ -19,12 +19,12 @@ console.log(sum/3)
 console.log("Here are further actions performed")
 
 // Function or just use of querySelector
-// const formChanges = document.querySelector("#heading");
-// const button = document.querySelector("#changeText");
+const formChanges = document.querySelector("#heading");
+const button = document.querySelector("#changeText");
 
-// button.addEventListener('click',function(){
-//     formChanges.textContent= 'Text Changed';
-// })
+button.addEventListener('click',function(){
+    formChanges.textContent= 'Text Changed';
+})
 
 function mySum(num1,num2){
     return num1 + num2;
