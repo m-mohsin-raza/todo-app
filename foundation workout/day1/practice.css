@@ -1,0 +1,56 @@
+aside {
+  width: 40%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+}
+
+header {
+  background-color: #f961669f;
+  margin-bottom: 0%;
+  border: black solid 1px;
+  padding-left: 10px;
+}
+header > nav {
+  background-color: #f96166d5;
+  /* display: flex; */
+}
+header > nav > ol {
+  display: flex;
+  justify-content: space-between;
+  /* justify-items: center; */
+  width: 80%;
+  align-items: center;
+  margin-top: 0%;
+
+}
+main {
+  margin-top: 0%;
+  background-color: #f9e7958a;
+  border: white solid 1px;
+}
+
+footer {
+  background-color: #f961669f;
+  border: black solid 1px;
+}
+
+[type="submit"] {
+  background-color: rgb(155, 243, 170);
+  border-radius: 5px;
+  border: none;
+  padding: auto; /* Bigger padding makes the button larger */
+  font-size: 9px; /* Larger text */
+  width: 50px; /* Optional: fixed width */
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+#form-submit:hover {
+  background-color: rgb(116, 206, 131);
+  border: 1px solid black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
