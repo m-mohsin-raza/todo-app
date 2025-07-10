@@ -86,6 +86,24 @@ h1 {
 #add-btn:hover {
   opacity: 0.9;
 }
+#todo-list li.completed .todo-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#todo-list button.delete {
+  background: transparent;
+  border: none;
+  color: #c00;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+#todo-list button.delete:hover {
+  color: darkred;
+}
+
 
 #todo-list {
   list-style: none;
