@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do App</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!--  fa fa icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -26,10 +27,35 @@
 
                 </ul>
             </section>
+            <div class="todo-controls">
+                <span id="task-count" title="Tasks remaining">
+                    <i class="fa fa-tasks"></i>
+                    <span class="count-number">0</span>
+                </span>
+
+                <div class="filters">
+                    <button data-filter="all" class="filter-btn active" title="All Tasks">
+                        <i class="fa fa-list"></i>
+                    </button>
+                    <button data-filter="active" class="filter-btn" title="Active Tasks">
+                        <i class="fa fa-square-o"></i>
+                    </button>
+                    <button data-filter="completed" class="filter-btn" title="Completed Tasks">
+                        <i class="fa fa-check-square-o"></i>
+                    </button>
+                </div>
+
+                <button id="clear-completed" title="Clear Completed">
+                    <i class="fa fa-trash-o"></i>
+                </button>
+            </div>
         </div>
     </main>
 
     <script src="js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-1q8d6b2e4f8c9a0f8b6c4d5e4f8c9a0f8b6c4d5e4f8c9a0f8b6c4d5e4f8c9a0f" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1q8d6b2e4f8c9a0f8b6c4d5e4f8c9a0f8b6c4d5e4f8c9a0f8b6c4d5e4f8c9a0f"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
