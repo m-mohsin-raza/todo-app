@@ -10,15 +10,17 @@ window.addEventListener("DOMContentLoaded", () => {
     todos = JSON.parse(stored);
     todos.forEach(renderTodo);
   }
+    setupEventListeners();
 });
 
-addBtn.addEventListener("click", addTodo);
-
-input.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    addTodo();
-  }
-});
+function setupEventListeners() {
+    addBtn.addEventListener("click", addTodo);
+    input.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        addTodo();
+      }
+    });
+}
 
 function addTodo() {
   const todoText = input.value.trim();
@@ -50,25 +52,34 @@ function renderTodo(todoItem) {
   li.setAttribute("data-id", todoItem.id);
   if (todoItem.completed) li.classList.add("completed");
 
-  li.innerHTML = `
-    <span class="todo-text">${todoItem.text}</span>
-    <button class="delete" title="Delete Task">
-      <i class="fa fa-trash"></i>
-    </button>
-  `;
+  const span = document.createElement("span");
+  span.className = "todo-text";
+  span.textContent = todoItem.text;
 
-  li.querySelector(".todo-text").addEventListener("click", function () {
+  const button = document.createElement("button");
+  button.className = "delete";
+  button.title = "Delete Task";
+
+  const icon = document.createElement("i");
+  icon.className = "fa fa-trash";
+  button.appendChild(icon);
+
+  // Event Listeners
+  span.addEventListener("click", () => {
     li.classList.toggle("completed");
     todoItem.completed = !todoItem.completed;
     saveTodos();
   });
 
-  li.querySelector(".delete").addEventListener("click", function () {
+  button.addEventListener("click", () => {
     todos = todos.filter((t) => t.id !== todoItem.id);
     saveTodos();
     li.remove();
   });
 
-  todoList.appendChild(li);
+  li.appendChild(span);
+  li.appendChild(button);
+  todoList.prepend(li);
 }
+
 
