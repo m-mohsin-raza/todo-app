@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-image: url(/assets/home-bg.jpg);
+    color: #EDF4F2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+}
